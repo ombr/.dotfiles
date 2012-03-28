@@ -1,0 +1,3 @@
+" tab navigation
+:nmap <S-Right> :tabnext<CR>
+:nmap <S-Left> :tabprevious<CR>
