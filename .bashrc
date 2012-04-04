@@ -273,4 +273,4 @@ alias pg='ps -Af | grep $1'         # requires an argument (note: /usr/bin/pg is
 alias save='git commit -a -m "save"'
 alias restore='git reset HEAD^'
 alias c='clear'
-~/.bin/screen.sh
+#~/.bin/screen.sh
