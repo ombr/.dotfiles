@@ -14,12 +14,12 @@ set $mod Mod4
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
 # use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier Mouse+$mod
+floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Return exec konsole
-bindsym $mod+Return exec rxvt
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
