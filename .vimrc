@@ -85,7 +85,7 @@ iab #i #include
 "nmap <F7> :!gnome-terminal --tab -e "aspell --lang=fr_FR --encoding=iso8859-1 check %:p"<Return>
 
 "Latex
-nmap <F4> :set fileencoding=latin1<Return>:w<Return>:!~/cmd/pdflatex.sh %:p:r<Return>
+nmap <F4> :set fileencoding=latin1<Return>:w<Return>:!~/.bin/pdflatex.sh %:p:r<Return>
 
 "map <C-V>		"+gP
 "imap <C-V>	<Esc>"+gPi
