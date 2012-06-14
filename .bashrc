@@ -61,7 +61,13 @@ color_prompt=yes
 #unset color_prompt force_color_prompt
 
 
+# Bash completion
+if [ -f /etc/bash_completion ]; then
+. /etc/bash_completion
+fi
 
+
+export GIT_PS1_SHOWDIRTYSTATE=1
 
 bash_prompt() {
     case $TERM in
@@ -129,13 +135,17 @@ bash_prompt_command() {
 }
 PROMPT_COMMAND=bash_prompt_command
 bash_prompt
+
+
 unset bash_prompt
 #PS1='\e[1;32;47m\u \e[1;32;47mon \h \e[1;35;47m\d \@\e[0;0m\n\e[1;32m[dir.= \w] \# > \e[0;0m'
 if [ $UID -ne 0 ]; then
-        PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]${NEW_PWD}\[\033[00m\]\$ '
+        PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]${NEW_PWD}\[\033[00m\]'
 else
-        PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;31m\]${NEW_PWD}\[\033[00m\]\$ '
+        PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;31m\]${NEW_PWD}\[\033[00m\]'
 fi
+#git branch in bashrc :-D
+PS1=$PS1'\[\033[01;33m\]$(__git_ps1 "(%s)")\[\033[01;34m\]\$ '
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
