@@ -145,7 +145,7 @@ else
         PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;31m\]${NEW_PWD}\[\033[00m\]'
 fi
 #git branch in bashrc :-D
-PS1=$PS1'\[\033[01;33m\]$(__git_ps1 "(%s)")\[\033[01;34m\]\$ '
+PS1=$PS1'\[\033[01;33m\]$(__git_ps1 "(%s)")\[\033[01;00m\]\$ '
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
@@ -171,7 +171,7 @@ esac
 
 # enable color support of ls and also add handy aliases
     eval "`dircolors -b`"
-    alias ls='ls --color=auto'
+    alias ls='ls -h --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
 
@@ -214,7 +214,7 @@ alias open="~/.bin/open.sh"
 #alias pdflatex="~/cmd/pdflatex.sh"
 #alias s="sudo shutdown -h 0"
 alias s="screen"
-alias sl="screen -list"
+#alias sl="screen -list"
 alias restart="sudo shutdown -r 0"
 alias gcc2="gcc -Wall -Wextra -m32 -g -std=c99 -o"
 alias n="nautilus ./"
@@ -239,8 +239,13 @@ mycd(){
 alias cd=mycd;
 alias v="vim --servername VIM --remote-tab"
 alias ranger="export EDITOR=\"/usr/bin/vim --servername VIM --remote-tab\"; ranger"
+alias r='ranger'
 alias vv="while true; do vim --servername VIM; done;"
+alias apal="tail /var/log/apache2/error.log"
+alias apar="sudo service apache2 restart"
+alias apaini="svim /etc/php5/apache2/php.ini"
 
+alias etc="cd /etc"
 export PATH=${PATH}":~/node_modules/.bin/"
 
 #Android :
@@ -281,6 +286,9 @@ alias hist='history | grep $1'      # requires an argument
 alias openports='netstat --all --numeric --programs --inet --inet6'
 alias pg='ps -Af | grep $1'         # requires an argument (note: /usr/bin/pg is installed by the util-linux package; maybe a different alias name should be used)
 
+alias gitp='git add -p && git commit'
+alias gitc='git commit'
+alias gits='git status'
 alias save='git commit -a -m "save"'
 alias restore='git reset HEAD^'
 alias c='clear'
