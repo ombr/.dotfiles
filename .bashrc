@@ -288,6 +288,7 @@ alias pg='ps -Af | grep $1'         # requires an argument (note: /usr/bin/pg is
 
 alias gitp='git add -p && git commit'
 alias gitc='git commit'
+alias gitcp='git cherry-pick'
 alias gits='git status'
 alias save='git commit -a -m "save"'
 alias restore='git reset HEAD^'
