@@ -100,6 +100,8 @@ set showtabline=2
 :nmap <S-Right> :tabnext<CR>
 :nmap <S-Left> :tabprevious<CR>
 
+
+map <leader>u :GundoToggle<CR>
 map <leader><leader> :NERDTreeToggle<CR>
 map <leader>l :TlistToggle<CR>
 "FuzzyFinderTextMate

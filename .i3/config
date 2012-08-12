@@ -28,7 +28,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
 bindsym $mod+z exec "gnome-screensaver; sleep 1; gnome-screensaver-command -a -l"
 bindsym $mod+x exec "sudo pm-suspend"
-bindsym $mod+n exec "thunar"
+#bindsym $mod+n exec "thunar"
+bindsym $mod+n exec "xfe"
 
 # change focus
 bindsym $mod+h focus left
