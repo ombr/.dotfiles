@@ -222,8 +222,8 @@ alias d="dolphin ./"
 alias ms="ecryptfs-add-passphrase"
 alias msecure="ecryptfs-add-passphrase && mount -i Secure/"
 #alias eclipse="/home/ombr/eclipse/eclipse &"
-alias lls="cd ~/public\_html/lls/"
-alias gut="cd ~/Public/Gutenborg-V3/"
+alias gut="cd ~/public_html/Gutenborg-V3/"
+alias usr="cd ~/public_html/usr/users/"
 alias nfirefox="firefox -no-remote -P blank"
 #alias sms="sudo ~/android/tools/adb shell am start -a android.intent.action.MAIN -n com.grrzzz.remotesmsfull/.RemoteSMS && ~/android/tools/adb forward tcp:8080 tcp:8080 && sleep 5s && firefox 127.0.0.1:8080"
 alias sms="sudo ~/android/tools/adb forward tcp:8080 tcp:8080 && firefox 127.0.0.1:8080"
@@ -257,7 +257,7 @@ export EDITOR=vim
 export VISUAL=vim
 
 export PATH=$PATH:"/home/ombr/public_html/lls/bin/"
-i3-msg border 1pixel >/dev/null
+#i3-msg border 1pixel >/dev/null
 
 #auto completion sur sudo
 complete -cf sudo

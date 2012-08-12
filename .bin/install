@@ -1,14 +1,18 @@
 vim-gtk
 rxvt-unicode
 git-core
+git-extra
+nodejs
 ranger
 filezilla
+i3
+ncdu
+ack-grep
 
 texlive
 eclipse
 javadoc
 gcc
-valgrind
 
 vlc
 nautilus
@@ -23,6 +27,16 @@ unison-gtk
 lamp-server^
 php5-cli
 phpMyAdmin
+php5 
+php5-dev
+php5-curl
+php5-gd
+php-pear
+php5-imagick
+php5-imap
+php5-mcrypt
+php5-memcache
+php5-common
 
 openssh-server
 
@@ -30,18 +44,7 @@ figlet
 boxes
 sl
 
-
 mc
 
 wakeonlan
 sysutils
-yakuake
-system-config-samba 
-samba
-smbfs
-tsclient
-subversion
-winbind
-
-wmctrl
-hugin

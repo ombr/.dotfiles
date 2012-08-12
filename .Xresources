@@ -1,11 +1,37 @@
-URxvt.font:  9x15
+!urxvt.font:  9x15 
+URxvt.font: xft:UbuntuMono:size=11
 URxvt.perl-ext-common:  default,matcher
 URxvt.urlLauncher:      /usr/bin/firefox
 URxvt.matcher.button:   1 
-URxvt*transparent: true
-URxvt*shading: 6 # 0 to 99 darkens, 101 to 200 lightens
-urxvt.foreground: #FFFFFF
-urxvt.background: #000000
-urxvt.color0: #FFFFFF 
-urxvt.color4: #FFFF00
+URxvt.scrollBar: False
+
+urxvt.transparent: true
+urxvt.shading: 6 # 0 to 99 darkens, 101 to 200 lightens
+
+urxvt.foreground:     rgb:dd/dd/dd
+urxvt.background:     rgb:22/22/22
+!black
+urxvt.color0:         rgb:19/19/19
+urxvt.color8:         rgb:25/25/25
+!red
+urxvt.color1:         rgb:80/32/32
+urxvt.color9:         rgb:98/2b/2b
+!green
+urxvt.color2:         rgb:5b/76/2f
+urxvt.color10:        rgb:89/b8/3f
+!brown/yellow
+urxvt.color3:         rgb:aa/99/43
+urxvt.color11:        rgb:ef/ef/60
+!blue
+urxvt.color4:         rgb:32/4c/80
+urxvt.color12:        rgb:2b/4f/98
+!magenta
+urxvt.color5:         rgb:70/6c/9a
+urxvt.color13:        rgb:82/6a/b1
+!cyan
+urxvt.color6:         rgb:92/b1/9e
+urxvt.color14:        rgb:a1/cd/cd
+!white
+urxvt.color7:         rgb:ff/ff/ff
+urxvt.color15:        rgb:dd/dd/dd
 

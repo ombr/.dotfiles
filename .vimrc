@@ -1,19 +1,15 @@
-"set nocompatible
-
-"Si vous voulez utiliez les CTRL+C, CTRL+V, ...
-"source $HOME/.vim/mswin.vim
-"Sinon vous pouvez toujours utiliser une version minimale qui surcharge juste
-"les CTRL+... vraiment utiles : récupérez les lignes qui vous intéressent dans
-"ce mswin.vim.
+set nocompatible
+call pathogen#infect()
 
 "Activation de la coloration et de l'intendation
 syn on
 set syntax=on
 filetype indent on
 filetype plugin on
+colorscheme elflord
 
 "Afficher les n° de ligne
-set nu
+set rnu
 
 "Activer la souris dans vim (dans gvim elle est déjà active)
 set mouse=a
@@ -24,7 +20,7 @@ set showmatch
 
 "Modifier la police
 "set guifont=Courier\ 9
-set guifont=Monospace\ 9
+"set guifont=Monospace\ 9
 
 "Modifier la taille des tabulations
 set tabstop=4
@@ -38,7 +34,8 @@ set incsearch
 set ignorecase
 set smartcase
 
-"Complétion
+"Completion
+set ofu=syntaxcomplete#Complete "Omni completion provides smart autocompletion for programs. 
 set wmnu "affiche le menu
 set wildmode=list:longest,list:full "affiche toutes les possibilités
 set wildignore=*.o,*.r,*.so,*.sl,*.tar,*.tgz "ignorer certains types de fichiers pour la complétion des includes
@@ -60,7 +57,7 @@ set wildignore=*.o,*.r,*.so,*.sl,*.tar,*.tgz "ignorer certains types de fichiers
 "set spell
 "set spellsuggest=5
 
-"Afficher la ligne du curseur
+" Afficher la ligne du curseur
 set cursorline
 
 " backup
@@ -69,7 +66,6 @@ if !filewritable($HOME."/.vim/backup") " Si le repertoire n'existe pas
 endif
 set backupdir=$HOME/.vim/backup " On definit le repertoire de sauvegarde
 set backup " On active le comportement
-
 
 imap <C-Space> <C-X><C-O>
 iab #i #include
@@ -104,5 +100,16 @@ set showtabline=2
 :nmap <S-Right> :tabnext<CR>
 :nmap <S-Left> :tabprevious<CR>
 
+map <leader><leader> :NERDTreeToggle<CR>
+map <leader>l :TlistToggle<CR>
+"FuzzyFinderTextMate
+map <leader>t :FuzzyFinderTextMate<CR>
+map <leader>b :FuzzyFinderBuffer<CR>
+let g:fuzzy_ignore = "*.svn"
+let g:fuzzy_ignore = "*.git*"
+let g:fuzzy_ignore = "*vendor*"
 
-call pathogen#infect()
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
