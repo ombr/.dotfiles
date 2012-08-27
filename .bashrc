@@ -237,11 +237,11 @@ mycd(){
 	cd $@ && ls
 }
 alias cd=mycd;
-alias v="vim --servername VIM --remote-tab"
+alias v="vim --servername VIM"
 alias ranger="export EDITOR=\"/usr/bin/vim --servername VIM --remote-tab\"; ranger"
 alias r='ranger'
 alias vv="while true; do vim --servername VIM; done;"
-alias apal="tail /var/log/apache2/error.log"
+alias apal="tail -f /var/log/apache2/error.log"
 alias apar="sudo service apache2 restart"
 alias apaini="svim /etc/php5/apache2/php.ini"
 

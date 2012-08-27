@@ -161,5 +161,7 @@ bar {
 new_window 1pixel
 for_window [class="urxvt"] border 1pixel
 exec --no-startup-id urxvt
+#exec jupiter
+exec nm-applet
 exec "sudo nm-applet"
 exec "xrandr -s 1920x1080"

@@ -97,11 +97,12 @@ set showtabline=2
 
 
 " tab navigation
-:nmap <S-Right> :tabnext<CR>
-:nmap <S-Left> :tabprevious<CR>
+":nmap <S-Right> :tabnext<CR>
+":nmap <S-Left> :tabprevious<CR>
 
 
 map <leader>u :GundoToggle<CR>
+let NERDTreeQuitOnOpen=1
 map <leader><leader> :NERDTreeToggle<CR>
 map <leader>l :TlistToggle<CR>
 "FuzzyFinderTextMate
@@ -112,6 +113,8 @@ let g:fuzzy_ignore = "*.git*"
 let g:fuzzy_ignore = "*vendor*"
 
 let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1 Does Not work ? Maybe conflict ?
+nmap <tab> :bn<CR>
+nmap <S-tab> :bp<CR>
+map <leader>q :NERDTreeClose<CR>:bd<CR>
 let g:miniBufExplModSelTarget = 1
