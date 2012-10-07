@@ -29,7 +29,9 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+z exec "gnome-screensaver; sleep 1; gnome-screensaver-command -a -l"
 bindsym $mod+x exec "sudo pm-suspend"
 #bindsym $mod+n exec "thunar"
-bindsym $mod+n exec "xfe"
+#bindsym $mod+n exec "xfe"
+bindsym $mod+n exec "nautilus --no-desktop"
+bindsym $mod+p exec "gvim"
 
 # change focus
 bindsym $mod+h focus left
@@ -38,10 +40,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-#bindsym $mod+Left focus left
-#bindsym $mod+Down focus down
-#bindsym $mod+Up focus up
-#bindsym $mod+Right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -50,10 +52,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-#bindsym $mod+Shift+Left move left
-#bindsym $mod+Shift+Down move down
-#bindsym $mod+Shift+Up move up
-#bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+g split h
@@ -133,17 +135,17 @@ mode "resize" {
         bindsym Shift+l         resize grow   right 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        #bindsym Left        resize shrink left 10 px or 10 ppt
-        #bindsym Shift+Left  resize grow   left 10 px or 10 ppt
+        bindsym Left        resize shrink left 10 px or 10 ppt
+        bindsym Shift+Left  resize grow   left 10 px or 10 ppt
 
-        #bindsym Down        resize shrink down 10 px or 10 ppt
-        #bindsym Shift+Down  resize grow   down 10 px or 10 ppt
+        bindsym Down        resize shrink down 10 px or 10 ppt
+        bindsym Shift+Down  resize grow   down 10 px or 10 ppt
 
-        #bindsym Up          resize shrink up 10 px or 10 ppt
-        #bindsym Shift+Up    resize grow   up 10 px or 10 ppt
+        bindsym Up          resize shrink up 10 px or 10 ppt
+        bindsym Shift+Up    resize grow   up 10 px or 10 ppt
 
-        #bindsym Right       resize shrink right 10 px or 10 ppt
-        #bindsym Shift+Right resize grow   right 10 px or 10 ppt
+        bindsym Right       resize shrink right 10 px or 10 ppt
+        bindsym Shift+Right resize grow   right 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
