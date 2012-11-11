@@ -1,3 +1,6 @@
 [submodule "install"]
 	path = install
 	url = git://github.com/ombr/.dotfiles_install.git
+[submodule ".vim"]
+	path = .vim
+	url = https://git@github.com:/ombr/.vim
