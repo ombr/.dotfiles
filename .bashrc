@@ -15,6 +15,7 @@ export HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTFILESIZE=50000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -114,13 +115,18 @@ bash_prompt() {
     [ $UID -eq "0" ] && UC=$R   # root's color
     
     PS1="$TITLEBAR ${EMK}[${UC}\u${EMK}@${UC}\h ${EMB}\${NEW_PWD}${EMK}]${UC}\\$ ${NONE}"
+    WHEREAMI="$LOGNAME@$HOSTNAME"
+    if [ "$WHEREAMI" = "ombr@ombr" ]; then
+        WHEREAMI=""
+    fi;
+
     # without colors: PS1="[\u@\h \${NEW_PWD}]\\$ "
     # extra backslash in front of \$ to make bash colorize the prompt
 }
 
 bash_prompt_command() {
     # How many characters of the $PWD should be kept
-    local pwdmaxlen=25
+    local pwdmaxlen=23
     # Indicate that there has been dir truncation
     local trunc_symbol=".."
     local dir=${PWD##*/}
@@ -140,7 +146,7 @@ bash_prompt
 unset bash_prompt
 #PS1='\e[1;32;47m\u \e[1;32;47mon \h \e[1;35;47m\d \@\e[0;0m\n\e[1;32m[dir.= \w] \# > \e[0;0m'
 if [ $UID -ne 0 ]; then
-        PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]${NEW_PWD}\[\033[00m\]'
+        PS1='\[\033[01;32m\]${WHEREAMI}\[\033[00m\]:\[\033[01;34m\]${NEW_PWD}\[\033[00m\]'
 else
         PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;31m\]${NEW_PWD}\[\033[00m\]'
 fi
@@ -180,7 +186,7 @@ esac
     alias egrep='egrep --color=auto'
 
 function nd(){
-	mkdir $1;
+	mkdir -p $1;
 	cd $1;
 }
 # some more ls aliases
@@ -189,19 +195,17 @@ alias la='ll -a'
 alias cp='cp -v'
 alias rm='rm -v'
 alias .='echo $PWD'
+alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
 alias up='svn up'
 alias ci='svn ci'
-alias ensibm='ssh -X boissayl@ensibm.imag.fr'
+alias mombr='ssh ombr@m.ombr.fr'
 #partage="/home/skippy/partage/"
 alias bashrc="vim ~/.bashrc && source ~/.bashrc"
-#alias rpartage="chmod -R -f 777 $partage"
-#alias partage="cd $partage"
 alias reloadrc="source ~/.bashrc"
-alias eee='ssh -X ombr@192.168.0.13'
-alias 309='ssh -X ombr@309.ombr.fr'
-alias api='ssh ombr@api.ombr.fr'
 #alias cours='cd ~/Documents/_Cours/'
 #alias work='cd ~/Documents/_WORK/'
 #alias serveur='tsclient -x ~/.tsclient/serveur.rdp'
@@ -218,12 +222,10 @@ alias s="screen"
 alias restart="sudo shutdown -r 0"
 alias gcc2="gcc -Wall -Wextra -m32 -g -std=c99 -o"
 alias n="nautilus ./"
+alias u="urxvt &"
 alias d="dolphin ./"
 alias ms="ecryptfs-add-passphrase"
 alias msecure="ecryptfs-add-passphrase && mount -i Secure/"
-#alias eclipse="/home/ombr/eclipse/eclipse &"
-alias gut="cd ~/public_html/Gutenborg-V3/"
-alias usr="cd ~/public_html/usr/users/"
 alias nfirefox="firefox -no-remote -P blank"
 #alias sms="sudo ~/android/tools/adb shell am start -a android.intent.action.MAIN -n com.grrzzz.remotesmsfull/.RemoteSMS && ~/android/tools/adb forward tcp:8080 tcp:8080 && sleep 5s && firefox 127.0.0.1:8080"
 alias sms="sudo ~/android/tools/adb forward tcp:8080 tcp:8080 && firefox 127.0.0.1:8080"
@@ -234,10 +236,17 @@ eee='ssh -X 192.168.0.13 \"echo "bonjour"; sleep 1s; x2x -east -to :0.0;\"'
 alias nmr="sudo /etc/rc.d/networkmanager restart"
 alias zf="~/public_html/lls/library/vendors/zend/bin/zf.sh"
 mycd(){
-	cd $@ && ls
+	cd "$@" && ls
 }
-alias cd=mycd;
-alias v="vim --servername VIM"
+alias cd=mycd
+#do not need to type cd in bash to change directory :-D
+shopt -s autocd
+#man bash
+shopt -s cdspell
+shopt -s dirspell
+
+alias f=fg
+alias v="gvim --servername VIM"
 alias ranger="export EDITOR=\"/usr/bin/vim --servername VIM --remote-tab\"; ranger"
 alias r='ranger'
 alias vv="while true; do vim --servername VIM; done;"
@@ -286,7 +295,7 @@ alias hist='history | grep $1'      # requires an argument
 alias openports='netstat --all --numeric --programs --inet --inet6'
 alias pg='ps -Af | grep $1'         # requires an argument (note: /usr/bin/pg is installed by the util-linux package; maybe a different alias name should be used)
 
-alias gitp='git add -p && git commit'
+alias gitp='git add -p && git commit -v'
 alias gitc='git commit'
 alias gitcp='git cherry-pick'
 alias gits='git status'
@@ -294,3 +303,12 @@ alias save='git commit -a -m "save"'
 alias restore='git reset HEAD^'
 alias c='clear'
 #~/.bin/screen.sh
+
+export CDPATH="~:~/public_html/:/etc/:~/public_html/ago/skror/"
+
+#RUBY :
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

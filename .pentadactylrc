@@ -1,0 +1,6 @@
+:map <A-left> :tabp<CR>
+:map <A-right> :tabn<CR>
+:map <A-down> :tabc<CR>
+:map <A-up> :pin<CR>
+:map <C-left> :back<CR>
+:map <C-right> :forward<CR>
