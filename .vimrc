@@ -168,7 +168,7 @@ nmap <silent> <C-S-l> <C-W>>
 nmap <silent> <C-S-h> <C-W><
 
 nmap <silent> <C-S-C> <C-W>c
-nmap <silent> <C-S-O> <C-W>o
+"nmap <silent> <C-S-O> <C-W>o
 nmap <silent> <C-S-N> <C-W>n
 
 
@@ -243,6 +243,7 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 "GVIM OPTIONS
 set guioptions= " Remove everything from Gvim (More intuitive ;-) )
+set guioptions+=a "http://stackoverflow.com/questions/7997380/selection-automatically-put-into-x11-clipboard-vim
 
 "Coffee 2 spaces indentation
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
