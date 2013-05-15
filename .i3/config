@@ -108,7 +108,7 @@ bindsym $mod+Shift+9 move workspace 9
 bindsym $mod+Shift+0 move workspace 10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -155,6 +155,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bindsym $mod+Shift+s exec /home/ombr/.i3/switch.py
+
+bindsym $mod+c focus output left
+bindsym $mod+Shift+c move workspace to output left
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -167,8 +170,9 @@ new_window 1pixel
 for_window [class="urxvt"] border 1pixel
 exec --no-startup-id urxvt
 #exec jupiter
-#exec nm-applet
-exec "sudo nm-applet"
-exec "gnome-sound-applet"
-exec "gnome-settings-daemon"
-exec "glipper"
+exec --no-startup-id "sudo nm-applet"
+exec --no-startup-id "gnome-sound-applet"
+exec --no-startup-id "gnome-settings-daemon"
+exec --no-startup-id "glipper"
+exec "nitrogen --restore"
+exec "xfce4-power-manager"

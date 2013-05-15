@@ -87,7 +87,6 @@ set backup " On active le comportement
 
 imap <C-Space> <C-X><C-O>
 iab #i #include
-
 "Compil
 "nmap <F5> :!gnatmake %:p:r<Return>
 "nmap <F6> :!gcc -Wall -Wextra -m32 -g -std=c99 -o %:p:r %:p<Return>
@@ -126,7 +125,8 @@ map <leader>S= :%s/\v\=([^ =])/= \1/gc<CR>:%s/\v([^= ])\=/\1 =/gc<CR>
 
 "Nerdtree configs
 let NERDTreeQuitOnOpen=1
-map <leader>] :NERDTreeToggle<CR>
+"map <leader>] :NERDTreeToggle<CR>
+map <leader>] :NERDTreeFind<CR>
 map <leader>? :TlistToggle<CR>
 
 
@@ -136,6 +136,8 @@ map <leader>b :FuzzyFinderBuffer<CR>
 let g:fuzzy_ignore = "*.svn"
 let g:fuzzy_ignore = "*.git*"
 let g:fuzzy_ignore = "*vendor*"
+
+map <leader>p :CtrlP<CR>
 
 "map <Leader>bb :MiniBufExplorer<cr>
 "map <Leader>bc :CMiniBufExplorer<cr>
