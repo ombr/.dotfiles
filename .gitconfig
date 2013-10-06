@@ -26,3 +26,5 @@
 	w = whatchanged
 [apply]
 	whitespace = strip     
+[push]
+	default = simple

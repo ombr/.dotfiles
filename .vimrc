@@ -251,7 +251,7 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 
 "GVIM OPTIONS
-set guioptions+=a "http://stackoverflow.com/questions/7997380/selection-automatically-put-into-x11-clipboard-vim
+set guioptions=a "http://stackoverflow.com/questions/7997380/selection-automatically-put-into-x11-clipboard-vim
 
 "Coffee 2 spaces indentation
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
