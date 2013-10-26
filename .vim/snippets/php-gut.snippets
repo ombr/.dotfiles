@@ -1,0 +1,62 @@
+snippet dfile
+	/**
+	 * ${1:My file}
+	 *
+	 * @author Luc Boissaye
+	 * @since 3.0
+	 * @copyright Gutenberg Technology (http://gutenberg-technology.com)
+	 * @todo
+	 */
+snippet dfunc
+	/**
+	 * ${5: My amazing function}
+	 * @param ${6:var \models\core\element\element}
+	 * @return ${7}
+	 * @author Luc Boissaye
+	 * @since 1.0
+	 * @access ${1:public}
+	 */
+	$1 function ${2:go}(${3}){
+		${4:return;}
+	}
+snippet dvar
+	/**
+	 * ${4:My Amazing variable} 
+	 * @var ${5:String}
+	 */
+	${3:private} $${1:foo}${2: = null};
+snippet getset
+	public function get${1:Var}(){
+		return $this->${2:var};
+	}
+	public function set$1($$2){
+		$this->$2 = $$2;
+		return $this;
+	}
+snippet d
+	\My\debug::dump($${1}${2:,true});
+snippet T
+	T::__('${1}')${2}
+snippet ex
+	Throw new Ex(${1:''});
+snippet in
+	use \My\Db\Db As Db;
+	use \My\Language\Translator as T;
+	use \My\Exception\AppException as Ex;
+	use \models\core\element\element as Element;
+snippet ajax
+	$this->addActionContext(
+		array(
+			'${1}'=>'all',
+		)
+	);        
+snippet redirect
+	$this->redirect(
+		array(
+			'module'=>'${1:default}',
+			'controller'=>'${2:index}',
+			'action'=>'${3:index}',
+			${4:''=>'',}
+		)	
+	);
+

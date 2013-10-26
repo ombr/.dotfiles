@@ -1,0 +1,66 @@
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/groenewege/vim-less
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/fuzzyfinder"]
+	path = bundle/fuzzyfinder
+	url = ssh://hg@bitbucket.org/ns9tks/vim-fuzzyfinder
+[submodule "bundle/vim-fuzzyfinder_textmate/plugin"]
+	path = bundle/vim-fuzzyfinder_textmate/plugin
+	url = https://github.com/airblade/fuzzyfinder_textmate.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-git"]
+	path = bundle/vim-git
+	url = https://github.com/tpope/vim-git.git
+[submodule "bundle/vim-nerdcommenter"]
+	path = bundle/vim-nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/vim-ack"]
+	path = bundle/vim-ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/vim-gundo"]
+	path = bundle/vim-gundo
+	url = http://github.com/sjl/gundo.vim.git
+[submodule "bundle/vim-snipmate"]
+	path = bundle/vim-snipmate
+	url = https://github.com/msanders/snipmate.vim
+[submodule "bundle/vim-twig"]
+	path = bundle/vim-twig
+	url = https://github.com/beyondwords/vim-twig.git
+[submodule "bundle/vim-phpunit/plugin"]
+	path = bundle/vim-phpunit/plugin
+	url = https://github.com/klokane/vim-phpunit.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "bundle/vim-ruby-debugger"]
+	path = bundle/vim-ruby-debugger
+	url = git://github.com/astashov/vim-ruby-debugger.git
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url = git@github.com:tpope/vim-rails.git
+[submodule "bundle/vim-yankring"]
+	path = bundle/vim-yankring
+	url = git@github.com:vim-scripts/YankRing.vim.git
+[submodule "bundle/vim-ctrlp.vim"]
+	path = bundle/vim-ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
