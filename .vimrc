@@ -3,10 +3,17 @@ call pathogen#infect()
 
 "Colors
 syn on
-set syntax=on
+syntax enable
 filetype indent on
 filetype plugin on
+
 colorscheme default
+set background=dark
+call togglebg#map("<F5>")
+let g:solarized_termcolors=16
+colorscheme solarized
+
+
 set colorcolumn=85
 
 "change buffer without saving
@@ -195,27 +202,22 @@ function MoveCurrentTab(value)
   exe 'tabmove '.move_to
 endfunction
 
-nmap <silent>  <A-Right> :tabn<CR>
-nmap <silent>  <A-Left> :tabp<CR>
-nmap <silent>  <A-Up> :tabnew<CR>
-nmap <silent>  <A-Down> :tabc<CR>
-nmap <silent> <A-S-Left> :call MoveCurrentTab(-1)<Esc>
-nmap <silent> <A-S-Right> :call MoveCurrentTab(1)<Esc>
-nmap <silent>  <A-1> 1gt
-nmap <silent>  <A-2> 2gt
-nmap <silent>  <A-3> 3gt
-nmap <silent>  <A-4> 4gt
-nmap <silent>  <A-5> 5gt
-nmap <silent>  <A-6> 6gt
-nmap <silent>  <A-7> 7gt
-nmap <silent>  <A-8> 8gt
-nmap <silent>  <A-9> 9gt
-nmap <silent>  <A-0> 10gt
-
-"Buffer
-nmap <leader>q :bd<CR>
-nmap <S-Left> :bn<CR>
-nmap <S-Right> :bp<CR>
+nmap <silent>  <S-Right> :tabn<CR>
+nmap <silent>  <S-Left> :tabp<CR>
+nmap <silent>  <S-Down> :tabnew<CR>
+nmap <silent>  <C-Up> :tabc<CR>
+nmap <silent> <C-Left> :call MoveCurrentTab(-1)<Esc>
+nmap <silent> <C-Right> :call MoveCurrentTab(1)<Esc>
+nmap <silent>  <C-1> 1gt
+nmap <silent>  <C-2> 2gt
+nmap <silent>  <C-3> 3gt
+nmap <silent>  <C-4> 4gt
+nmap <silent>  <C-5> 5gt
+nmap <silent>  <C-6> 6gt
+nmap <silent>  <C-7> 7gt
+nmap <silent>  <C-8> 8gt
+nmap <silent>  <C-9> 9gt
+nmap <silent>  <C-0> 10gt
 
 "French accents on qwerty keyboard :
 imap <leader>ee é
@@ -241,6 +243,7 @@ imap <leader>y.. ÿ
 
 "exit insert mode with jj
 inoremap jj <ESC>
+inoremap <Nul> <C-x><C-o>
 "pasting without indentation problems.
 set pastetoggle=<F2>
 "set formatoptions=tcp << TODO !

@@ -204,6 +204,7 @@ alias up='svn up'
 alias ci='svn ci'
 alias mombr='ssh ombr@m.ombr.fr'
 #partage="/home/skippy/partage/"
+alias Xresources="vim ~/.Xresources && xrdb -merge ~/.Xresources"
 alias bashrc="vim ~/.bashrc && source ~/.bashrc"
 alias reloadrc="source ~/.bashrc"
 #alias cours='cd ~/Documents/_Cours/'
