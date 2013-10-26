@@ -1,0 +1,29 @@
+set show-all-if-ambiguous on
+set visible-stats on
+set match-hidden-files off
+#set expand-tilde on
+#set mark-directories on
+#set completion-query-items 200
+#set bell-style none
+#
+#set input-meta on
+#set output-meta on
+#
+#$if Bash
+#    Space: magic-space
+#    $endif
+#
+"\C-TAB": menu-complete
+#"\C-x\C-f": complete-filename
+#"\C-x\C-u": complete-username
+#"\C-x\C-h": complete-hostname
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+
