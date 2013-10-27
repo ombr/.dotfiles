@@ -204,8 +204,8 @@ endfunction
 
 nmap <silent>  <S-Right> :tabn<CR>
 nmap <silent>  <S-Left> :tabp<CR>
-nmap <silent>  <S-Down> :tabnew<CR>
-nmap <silent>  <C-Up> :tabc<CR>
+nmap <silent>  <S-Up> :tabnew<CR>
+nmap <silent>  <S-Down> :tabc<CR>
 nmap <silent> <C-Left> :call MoveCurrentTab(-1)<Esc>
 nmap <silent> <C-Right> :call MoveCurrentTab(1)<Esc>
 nmap <silent>  <C-1> 1gt
