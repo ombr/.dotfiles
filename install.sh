@@ -2,4 +2,5 @@
 git clone https://github.com/ombr/.dotfiles.git /tmp/$$
 mv /tmp/$$/.git ~/
 git checkout ./
-rm ~/install.sh
+git submodule init
+git submodule update
