@@ -70,3 +70,12 @@
 [submodule ".vim/bundle/vim-gundo"]
 	path = .vim/bundle/vim-gundo
 	url = https://github.com/sjl/gundo.vim.git
+[submodule ".vim/bundle/vim-yankring"]
+	path = .vim/bundle/vim-yankring
+	url = https://github.com/vim-scripts/YankRing.vim.git
+[submodule ".vim/bundle/vim-rails"]
+	path = .vim/bundle/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule ".vim/bundle/vim-bundler"]
+	path = .vim/bundle/vim-bundler
+	url = https://github.com/tpope/vim-bundler.git
