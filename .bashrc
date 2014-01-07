@@ -242,11 +242,11 @@ ensibm='boissayl@ensibm.imag.fr'
 eee='ssh -X 192.168.0.13 \"echo "bonjour"; sleep 1s; x2x -east -to :0.0;\"'
 #alias projet="cd /home/ombr/Documents/_Cours/Projets"
 alias nmr="sudo /etc/rc.d/networkmanager restart"
-alias zf="~/public_html/lls/library/vendors/zend/bin/zf.sh"
 mycd(){
 	cd "$@" && ls
 }
 alias cd=mycd
+alias migrate='bundle exec rake db:migrate && bundle exec rake RAILS_ENV=test db:migrate'
 #do not need to type cd in bash to change directory :-D
 shopt -s autocd
 #man bash
