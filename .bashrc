@@ -261,6 +261,7 @@ alias apaini="svim /etc/php5/apache2/php.ini"
 
 alias etc="cd /etc"
 export PATH=${PATH}":~/node_modules/.bin/"
+alias node='nodejs'
 
 #Android :
 export PATH=${PATH}":~/android/tools"
