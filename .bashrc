@@ -223,7 +223,10 @@ alias s="screen"
 alias restart="sudo shutdown -r 0"
 alias gcc2="gcc -Wall -Wextra -m32 -g -std=c99 -o"
 alias n="nautilus --no-desktop ./"
-alias u="urxvt &"
+alias u="bundle exec unicorn -c config/unicorn.rb"
+alias console="heroku run rails c -r"
+alias migrate="bundle exec rake db:migrate && RAILS_ENV=test bundle exec rake db:migrate"
+alias h="heroku"
 alias d="dolphin ./"
 alias ms="ecryptfs-add-passphrase"
 alias msecure="ecryptfs-add-passphrase && mount -i Secure/"
@@ -329,3 +332,6 @@ eval "$(rbenv init -)"
 bind '"\e[1;0C":forward-word'
 bind '"\e[1;0D":backward-word'
 set -o vi
+
+# added by travis gem
+[ -f /home/ombr/.travis/travis.sh ] && source /home/ombr/.travis/travis.sh
