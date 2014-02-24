@@ -259,3 +259,8 @@ set guioptions=a "http://stackoverflow.com/questions/7997380/selection-automatic
 "Coffee 2 spaces indentation
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 au BufWritePost *.coffee silent CoffeeLint | cwindow | redraw!
+
+" Autocomplete tab
+imap <Tab> <C-P>
+set complete=.,b,u,]
+set wildmode=longest,list:longest
