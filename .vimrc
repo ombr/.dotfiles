@@ -32,7 +32,7 @@ set undodir=~/.vim-undo//
 nmap <silent><leader>ve :e $MYVIMRC<CR>
 nmap <silent><leader>vr :so $MYVIMRC<CR>
 "Afficher les n° de ligne
-"set rnu
+set nu
 
 "Activer la souris dans vim (dans gvim elle est déjà active)
 set mouse=a
